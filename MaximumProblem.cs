@@ -6,24 +6,33 @@ using System.Threading.Tasks;
 
 namespace GenericsProblem
 {
-    public class MaximumProblem
-    {
-        public static double MaxFloatNumberCheck(double firstvalue, double secondvalue, double thirdvalue)
-        {
-            if (firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) > 0)
-            {
-                return firstvalue;
-            }
-            if (secondvalue.CompareTo(firstvalue) > 0 && secondvalue.CompareTo(thirdvalue) > 0)
-            {
-                return secondvalue;
-            }
-            if (thirdvalue.CompareTo(firstvalue) > 0 && thirdvalue.CompareTo(secondvalue) > 0)
-            {
-                return thirdvalue;
-            }
-            throw new Exception("firstNumber , secondNumber , thirdNumber are same");
 
+    public class GenericMaximumArray<T> where T : IComparable
+    {
+        public T[] value;
+
+        public GenericMaximumArray(T[] value)
+        {
+            this.value = value;
         }
+        
+        public T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+
+        public T MaxValue(params T[] values)
+        {
+            var sorted_values = Sort(values);
+            return sorted_values[^1];
+        }
+
+        public T MaxMethod()
+        {
+            var Max = MaxValue(value);
+            return Max;
+        }
+
     }
 }

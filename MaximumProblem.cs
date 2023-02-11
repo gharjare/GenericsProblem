@@ -8,7 +8,7 @@ namespace GenericsProblem
 {
     public class MaximumProblem
     {
-        public static int MaxNumberCheck(int firstvalue, int secondvalue, int thirdvalue)
+        public static double MaxFloatNumberCheck(double firstvalue, double secondvalue, double thirdvalue)
         {
             if (firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) > 0)
             {

@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Generics problem");
-            int output = MaximumProblem.MaxNumberCheck(23, 54, 84);
+            double output = MaximumProblem.MaxFloatNumberCheck(25.45, 54.87, 84.56);
             Console.WriteLine(output);
         }
     }
